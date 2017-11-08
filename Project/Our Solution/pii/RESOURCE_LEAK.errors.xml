@@ -1,0 +1,341 @@
+<error>
+<checker>RESOURCE_LEAK</checker>
+<file>/home/s7ren/workspace/pii/pi/ProgramCall.java</file>
+<function>ProgramCall.anlyseLLVMoutPut(java.lang.String)</function>
+<score>100</score>
+<ordered>true</ordered>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;fileName == null&quot;}}</description>
+<line>44</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStr{v1}{End of if statement}}</description>
+<line>45</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;file.isFile()&quot;}}</description>
+<line>61</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;file.exists()&quot;}}</description>
+<line>61</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>new_resource</tag>
+<description>{CovLStr{v1}{{0} creates a new resource.}{&quot;new java.io.FileInputStream(file)&quot;}}</description>
+<line>62</line>
+</event>
+<event>
+<tag>var_assign</tag>
+<description>{CovLStr{v1}{Assigning: {0} = resource returned from {1}.}{&quot;read&quot;}{&quot;new java.io.InputStreamReader(new java.io.FileInputStream(file), encoding)&quot;}}</description>
+<line>62</line>
+</event>
+<event>
+<tag>var_assign</tag>
+<description>{CovLStr{v1}{Assigning: {0} = resource returned from {1}.}{&quot;bufferedReader&quot;}{&quot;new java.io.BufferedReader(read)&quot;}}</description>
+<line>66</line>
+</event>
+<event>
+<tag>noescape</tag>
+<description>{CovLStr{v1}{Resource {0} is not closed or saved in function {1}.}{&quot;bufferedReader&quot;}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;(singleLine = bufferedReader.readLine()) != null&quot;}}</description>
+<line>70</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;singleLine.trim().startsWith(&quot;Call &quot;)&quot;}}</description>
+<line>72</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>else_branch</tag>
+<description>{CovLStr{v1}{Reached else branch}}</description>
+<line>88</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;singleLine.trim().startsWith(&quot;CS&quot;)&quot;}}</description>
+<line>88</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;matcher1.find()&quot;}}</description>
+<line>90</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>loop</tag>
+<description>{CovLStr{v1}{Jumping back to the beginning of the loop}}</description>
+<line>97</line>
+<path_event>
+<jump>true</jump>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>loop_begin</tag>
+<description>{CovLStr{v1}{Jumped back to beginning of loop}}</description>
+<line>70</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>noescape</tag>
+<description>{CovLStr{v1}{Resource {0} is not closed or saved in function {1}.}{&quot;bufferedReader&quot;}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;(singleLine = bufferedReader.readLine()) != null&quot;}}</description>
+<line>70</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;singleLine.trim().startsWith(&quot;Call &quot;)&quot;}}</description>
+<line>72</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;matcher1.find()&quot;}}</description>
+<line>75</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>else_branch</tag>
+<description>{CovLStr{v1}{Reached else branch}}</description>
+<line>80</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;matcher2.find()&quot;}}</description>
+<line>80</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>if_fallthrough</tag>
+<description>{CovLStr{v1}{Falling through to end of if statement}}</description>
+<line>86</line>
+<path_event>
+<jump>true</jump>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStr{v1}{End of if statement}}</description>
+<line>96</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>loop</tag>
+<description>{CovLStr{v1}{Jumping back to the beginning of the loop}}</description>
+<line>97</line>
+<path_event>
+<jump>true</jump>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>loop_begin</tag>
+<description>{CovLStr{v1}{Jumped back to beginning of loop}}</description>
+<line>70</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>noescape</tag>
+<description>{CovLStr{v1}{Resource {0} is not closed or saved in function {1}.}{&quot;bufferedReader&quot;}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<tag>throw</tag>
+<description>{CovLStr{v1}{Throwing {0} (or subclass) from call to {1}}{java.io.IOException}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>leaked_resource</tag>
+<description>{CovLStr{v1}{Variable {0} going out of scope leaks the resource it refers to.}{&quot;bufferedReader&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<main>true</main>
+<tag>leaked_resource</tag>
+<description>{CovLStr{v1}{Variable {0} going out of scope leaks the resource it refers to.}{&quot;read&quot;}}</description>
+<line>70</line>
+</event>
+<extra>FileInputStream</extra>
+<subcategory>none</subcategory>
+</error>
+<error>
+<checker>RESOURCE_LEAK</checker>
+<file>/home/s7ren/workspace/pii/pi/ProgramCall.java</file>
+<function>ProgramCall.anlyseLLVMoutPut(java.lang.String)</function>
+<score>100</score>
+<ordered>true</ordered>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;fileName == null&quot;}}</description>
+<line>44</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStr{v1}{End of if statement}}</description>
+<line>45</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;file.isFile()&quot;}}</description>
+<line>61</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;file.exists()&quot;}}</description>
+<line>61</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>new_resource</tag>
+<description>{CovLStr{v1}{{0} creates a new resource.}{&quot;new java.io.FileInputStream(file)&quot;}}</description>
+<line>62</line>
+</event>
+<event>
+<tag>var_assign</tag>
+<description>{CovLStr{v1}{Assigning: {0} = resource returned from {1}.}{&quot;read&quot;}{&quot;new java.io.InputStreamReader(new java.io.FileInputStream(file), encoding)&quot;}}</description>
+<line>62</line>
+</event>
+<event>
+<tag>var_assign</tag>
+<description>{CovLStr{v1}{Assigning: {0} = resource returned from {1}.}{&quot;bufferedReader&quot;}{&quot;new java.io.BufferedReader(read)&quot;}}</description>
+<line>66</line>
+</event>
+<event>
+<tag>noescape</tag>
+<description>{CovLStr{v1}{Resource {0} is not closed or saved in function {1}.}{&quot;bufferedReader&quot;}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<tag>cond_true</tag>
+<description>{CovLStr{v1}{Condition {0}, taking true branch}{&quot;(singleLine = bufferedReader.readLine()) != null&quot;}}</description>
+<line>70</line>
+<path_event></path_event>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;singleLine.trim().startsWith(&quot;Call &quot;)&quot;}}</description>
+<line>72</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>else_branch</tag>
+<description>{CovLStr{v1}{Reached else branch}}</description>
+<line>88</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStr{v1}{Condition {0}, taking false branch}{&quot;singleLine.trim().startsWith(&quot;CS&quot;)&quot;}}</description>
+<line>88</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStr{v1}{End of if statement}}</description>
+<line>96</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>loop</tag>
+<description>{CovLStr{v1}{Jumping back to the beginning of the loop}}</description>
+<line>97</line>
+<path_event>
+<jump>true</jump>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>loop_begin</tag>
+<description>{CovLStr{v1}{Jumped back to beginning of loop}}</description>
+<line>70</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>noescape</tag>
+<description>{CovLStr{v1}{Resource {0} is not closed or saved in function {1}.}{&quot;bufferedReader&quot;}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<tag>throw</tag>
+<description>{CovLStr{v1}{Throwing {0} (or subclass) from call to {1}}{java.io.IOException}{&quot;java.io.BufferedReader.readLine()&quot;}}</description>
+<line>70</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>leaked_resource</tag>
+<description>{CovLStr{v1}{Variable {0} going out of scope leaks the resource it refers to.}{&quot;bufferedReader&quot;}}</description>
+<line>70</line>
+</event>
+<event>
+<main>true</main>
+<tag>leaked_resource</tag>
+<description>{CovLStr{v1}{Variable {0} going out of scope leaks the resource it refers to.}{&quot;read&quot;}}</description>
+<line>70</line>
+</event>
+<extra>FileInputStream</extra>
+<subcategory>none</subcategory>
+</error>

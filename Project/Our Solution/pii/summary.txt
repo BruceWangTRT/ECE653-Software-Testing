@@ -1,0 +1,12 @@
+/opt/cov-analysis-linux64-6.0.3/bin/cov-analyze --java --config=/opt/cov-analysis-linux64-6.0.3/config/coverity_config.xml --dir=/home/s7ren/sa_output/intermediate_r 
+Analysis summary report:
+------------------------
+Files analyzed                  : 5
+Total LoC input to cov-analyze  : 511
+Functions analyzed              : 50
+Paths analyzed                  : 1079
+Time taken by Coverity analysis : 00:00:10
+Defect occurrences found        : 5 Total
+                                  3 NULL_RETURNS
+                                  2 RESOURCE_LEAK
+
